@@ -1,10 +1,12 @@
-from django.urls import path
+from rest_framework.routers import DefaultRouter
 
 from . import views
 
 app_name = 'api'
 
+router = DefaultRouter()
+router.register('customers', views.CustomerViewSet, basename='customers')
+router.register('quotes', views.QuoteViewSet, basename='quotes')
+router.register('policies', views.PolicyViewSet, basename='policies')
 
-urlpatterns = [
-    path('create_customer/', views.CreateCustomerView.as_view(), name='create_customer'),
-]
+urlpatterns = router.urls

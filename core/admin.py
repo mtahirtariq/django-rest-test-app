@@ -13,4 +13,10 @@ class CustomerModelAdmin(admin.ModelAdmin):
     get_full_name.__name__ = 'Full Name'
 
 
+class PolicyModelAdmin(admin.ModelAdmin):
+    """ModelAdmin configuration class for Policy"""
+    list_display = ('customer', 'type', 'premium', 'cover', 'state', 'start_date', 'end_date')
+
+
 admin.site.register(models.Customer, CustomerModelAdmin)
+admin.site.register(models.Policy, PolicyModelAdmin)

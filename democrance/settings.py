@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_filters',
+
     'core',
 ]
 
@@ -129,6 +131,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # REST Framework
 REST_FRAMEWORK = {
-    'DATE_INPUT_FORMATS': ["%d-%m-%Y", ],
-    'DATE_FORMAT': "%d-%m-%Y",
+    'DATE_INPUT_FORMATS': ['%d-%m-%Y', ],
+    'DATE_FORMAT': '%d-%m-%Y',
 }
