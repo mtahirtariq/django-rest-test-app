@@ -1,5 +1,6 @@
 REST API TEST APP
 
+Python Requirement: 3.6+
 
 To run the application:
 
